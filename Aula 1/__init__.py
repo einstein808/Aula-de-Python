@@ -1,4 +1,4 @@
-class funcionario:
+class Funcionario:
     def setNome(self, nome):
         self._nome = nome
 
@@ -26,5 +26,10 @@ class funcionario:
     def salarioLiquido(self):
       return self._salarioBruto + self._totalAcrescimo - self._totalDesconto
 
-funcionario()
+funcionario = Funcionario()
+funcionario.setNome("marcos")
+funcionario.setSalBruto(1200)
+funcionario.setTotalDesconto(300)
+funcionario.setTotalAcrescimo(400)
+print(funcionario.salarioLiquido())
 
