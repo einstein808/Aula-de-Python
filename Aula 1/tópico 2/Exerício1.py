@@ -1,5 +1,5 @@
 class Pessoa:
-    def __init__(self, nome, email, celular):
+    def __init__(self, nome,celular, email):
         self._nome = nome
         self._email = email
         self._celular = celular
@@ -16,35 +16,33 @@ class Pessoa:
     def getCelular(self):
         return self._celular
 
-
-class Funcionario(Pessoa):
-    def __init__(self, nome, celular, email, cpf, salario):
-        Pessoa.__init__(self, nome, celular, email, )
-        self._cpf = cpf
-        self._salario = salario
-
+class PessoaFisica(Pessoa):
+    def __init__(self, nome, celular, email,cpf):
+     Pessoa.__init__(self, nome, celular, email)
+     self._cpf = cpf
     def setCpf(self, cpf):
         self._cpf = cpf
     def getCpf(self):
         return self._cpf
+
+
+class Funcionario(PessoaFisica):
+    def __init__(self, nome, celular, email, cpf, salario):
+        PessoaFisica.__init__(self, nome, celular, email, cpf)
+        self._salario = salario
+
+
 
     def setSalario(self, salario):
         self._salario = salario
     def getSalario(self):
         return self._salario
 
-class Cliente(Pessoa):
+class Cliente(PessoaFisica):
 
     def __init__(self,nome, celular, email, cpf, limiteCredito):
-        Pessoa.__init__(self,nome, celular, email,)
-        self._cpf = cpf
+        PessoaFisica.__init__(self,nome, celular, email,cpf)
         self._limiteCredito = limiteCredito
-
-    def setCpf(self, cpf):
-            self._cpf = cpf
-
-    def getCpf(self):
-            return self._cpf
 
     def setLimiteCredito(self, limiteCredito):
         self._limiteCredito = limiteCredito
@@ -70,8 +68,12 @@ funcionario = Funcionario("carlos", "3299983892", "amodeus@gmail.com", 1234566,1
 cliente = Cliente("dalila", "3299983892", "amodeus@gmail.com","12455", 2000)
 fornecedor = Fornecedor("abc", "3299983892", "amodeus@gmail.com","103983874", 10)
 print(f"nome do cliente = {cliente.getNome()}")
+print(f"o Cpf do cliente é = {cliente.getCpf()}")
+print(f"O telefone do cliente é = {cliente.getCelular()}")
+print(f"email do cleinte é = {cliente.getEmail()}")
 print(f"Nome do funcionário é = {funcionario.getNome()}")
-print(f"nome da empresa é = {fornecedor.getNome()}")
+
+
 
 
 
