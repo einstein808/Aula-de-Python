@@ -43,6 +43,7 @@ class AlunoEnsinoMedio(Aluno):
             return ("Aprovado")
         else:
             return ("Reprovado")
+
 class AlunoGraducao(Aluno):
     def __init__(self, nome, matricula, nota1, nota2):
         Aluno.__init__(self, nome, matricula, nota1,nota2)
@@ -54,11 +55,31 @@ class AlunoGraducao(Aluno):
             return ("Reprovado")
 
 class Professor(Pessoa):
-    def __init__(self, nome, matricula):
+    def __init__(self, nome, matricula, titulacao):
         Pessoa.__init__(self, nome,matricula)
+        self._titulacao = titulacao
 
-    set
+    def getTitulacao(self):
+        return self._titulacao
+
+    def setTitulacao(self, titulacao):
+        self._titualacao = titulacao
+
 
 
 aluno = AlunoEnsinoMedio("carlos","32323322", 60, 80)
-print(aluno.setAprovado())
+professor = Professor("albeto", "333333", "doutor")
+print(f"O aluno do ensino médio: {aluno.getNome()}")
+print(f"matricula:{aluno.getMatricula()}")
+print(f"Cujo professor é: {professor.getTitulacao()} {professor.getNome()}")
+print(f"Está = {aluno.setAprovado()}")
+
+print()
+
+aluno2 = AlunoGraducao("vivaldo", "222332", 70, 70)
+professor2 = Professor("junior3", "33333", "graduando")
+
+print(f"O aluno da graduação: {aluno2.getNome()}")
+print(f"matricula:{aluno2.getMatricula()}")
+print(f"Cujo professor é: {professor2.getTitulacao()} {professor2.getNome()}")
+print(f"Está = {aluno2.setAprovado()}")
