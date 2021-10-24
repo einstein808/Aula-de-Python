@@ -1,9 +1,20 @@
 class Funcionario:
+    def __init__(self, nome, sobrenome):
+        self._nome = nome
+        self._sobrenome = sobrenome
+        self._salarioBruto = salarioBruto
+        self._totalAcrescimo = totalAcrescimo
+        self._totalDesconto = totalDesconto
+
     def setNome(self, nome):
         self._nome = nome
 
     def getNome(self):
         return self._nome
+    def setSobrenome(self, sobrenome):
+        self._sobrenome = sobrenome
+    def getSobrenome(self):
+        return self._sobrenome
 
     def setSalBruto(self, salarioBruto):
         self._salarioBruto = salarioBruto
@@ -26,10 +37,17 @@ class Funcionario:
     def salarioLiquido(self):
       return self._salarioBruto + self._totalAcrescimo - self._totalDesconto
 
-funcionario = Funcionario()
-funcionario.setNome("marcos")
-funcionario.setSalBruto(1200)
-funcionario.setTotalDesconto(300)
-funcionario.setTotalAcrescimo(400)
-print(funcionario.salarioLiquido())
+nome = input("Digite seu sobrenome")
+sobrenome = input("Digite seu sobrenome")
+salarioBruto = int(input("Digite seu salário Bruto"))
+totalAcrescimo = int(input("Digite total de acréscimos"))
+totalDesconto = int(input("Digite total de descontos"))
+
+funcionario = Funcionario(nome, sobrenome)
+funcionario.setTotalDesconto(totalDesconto)
+funcionario.setTotalAcrescimo(totalAcrescimo)
+funcionario.setSalBruto(salarioBruto)
+print()
+print(f"O salário Liquido de {funcionario.getNome()} {funcionario.getSobrenome()} é = R${funcionario.salarioLiquido()}.")
+
 
