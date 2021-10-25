@@ -86,6 +86,8 @@ class Curso:
         return self._coordenador
     def setCoordenador(self, coordenador):
         self._coordenador = coordenador
+    #ndhjdhdhd
+
 
 
 
