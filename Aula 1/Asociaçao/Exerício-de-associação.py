@@ -89,6 +89,12 @@ class Curso:
     #ndhjdhdhd
 
 
+    def getDescricaoEscolaridadeCoordenador(self):
+        if self._coordenador == None:
+            return "Coordenador sem escolaridade"
+        else:
+            return self._coordenador.getDescricaoEscolaridade()
+
 
 
 #estado = Estado("rj")
@@ -107,4 +113,4 @@ curso = Curso("computaçao")
 professor.setEscolaridade(escolaridade)
 curso.setCoordenador(professor)
 
-print(curso.professor)
+print(curso.getDescricaoEscolaridadeCoordenador())
