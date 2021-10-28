@@ -8,6 +8,5 @@
 * 🐧Logo terá um repositório voltato a linux com tutorias e algo que venho aprendendo 
   por livros e pesquisa na internet.
   ddd
-![dessss](https://imgur.com/a/RvNrHH6) 
-  
+  ![ ](https://github.com/einstein808/Aula-de-Python/blob/main/img/Screenshot_20211024_125831.png "TReste")
 
