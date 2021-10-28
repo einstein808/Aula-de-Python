@@ -8,6 +8,6 @@
 * 🐧Logo terá um repositório voltato a linux com tutorias e algo que venho aprendendo 
   por livros e pesquisa na internet.
   ddd
-![](https://imgur.com/a/RvNrHH6) 
+![dessss](https://imgur.com/a/RvNrHH6) 
   
 
