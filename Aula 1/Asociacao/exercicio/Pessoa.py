@@ -32,3 +32,6 @@ class Pessoa:
             return self._naturalidade.getNome()
     def getEstadoNaturalidade(self):
         return self._naturalidade.getNomeEstado()
+
+    def getEstadoEscolaAluno(self):
+        self._escolaAluno.getEstadoEscola()
