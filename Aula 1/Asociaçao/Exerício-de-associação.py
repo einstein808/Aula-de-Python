@@ -8,6 +8,7 @@ class Estado:
     def seNome(self, nome):
         self._nome = nome
 
+
 class Cidade:
     def __init__(self, nome):
         self._nome = nome
@@ -94,6 +95,28 @@ class Curso:
             return "Coordenador sem escolaridade"
         else:
             return self._coordenador.getDescricaoEscolaridade()
+class Escola:
+    def __init__(self,nome):
+        self._nome = nome
+        self._diretor = None
+    def setDiretor(self, diretor):
+        self._diretor = diretor
+    def getDiretor(self):
+        return self._diretor
+
+    def getEscolaridaDiretor(self):
+        if self._diretor == None:
+            return "escola sem diretor"
+        else:
+            return self._diretor.getDescricaoEscolaridade()
+class Aluno(Pessoa):
+    def __init__(self, nome):
+        Pessoa.__init__(self, nome)
+        self._naturalidade = None
+
+    def getEstadoNaturalidadeAluno(self):
+        self._nome._naturalidade.getNomeEstado()
+
 
 
 
@@ -107,10 +130,28 @@ class Curso:
 # professor.setEscolaridade(escolaridade)
 # print(professor.getDescricaoEscolaridade())
 
-escolaridade = Escolaridade("Pos-gradução")
-professor = Professor("maria")
-curso = Curso("computaçao")
-professor.setEscolaridade(escolaridade)
-curso.setCoordenador(professor)
+# escolaridade = Escolaridade("Pos-gradução")
+# professor = Professor("maria")
+# curso = Curso("computaçao")
+# professor.setEscolaridade(escolaridade)
+# curso.setCoordenador(professor)
+# print(curso.getDescricaoEscolaridadeCoordenador())
 
-print(curso.getDescricaoEscolaridadeCoordenador())
+# escolaridade = Escolaridade("doutorado")
+# professor = Professor("adalberto")
+# escola = Escola("machado")
+# professor.setEscolaridade(escolaridade)
+# escola.setDiretor(professor)
+# print(escola.getEscolaridaDiretor())
+
+aluno = Aluno("damaceno")
+naturalidade = Cidade("camos de minas")
+estado = Estado("alagoas")
+aluno.setNaturalidade(naturalidade)
+naturalidade.setNome(estado)
+print(aluno.getEstadoNaturalidadeAluno())
+
+
+
+
+
