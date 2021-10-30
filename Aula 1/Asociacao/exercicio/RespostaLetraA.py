@@ -1,7 +1,7 @@
-from Aluno import Aluno
-from Cidade import Cidade
-from Estado import Estado
-estado = Estado("rj")
-cidade = Cidade("juiz de fora")
-cidade.setEstado(estado)
-print(cidade.getNomeEstado())
+
+from Professor import Professor
+from Escolaridade import Escolaridade
+escolaridade = Escolaridade("mestradoss")
+professor = Professor("ana")
+professor.setEscolaridade(escolaridade)
+print(professor.getDescricaoEscolaridade())

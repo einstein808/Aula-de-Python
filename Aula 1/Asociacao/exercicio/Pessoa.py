@@ -1,8 +1,13 @@
+from Estado import Estado
+from Escola import Escola
+
 class Pessoa:
     def __init__(self, nome):
         self._nome = nome
         self._escolaridade = None
         self._naturalidade = None
+        self._escolaPessoa = None
+
 
     def setEscolaridade(self, escolaridade):
         self._escolaridade = escolaridade
@@ -33,5 +38,11 @@ class Pessoa:
     def getEstadoNaturalidade(self):
         return self._naturalidade.getNomeEstado()
 
-    def getEstadoEscolaAluno(self):
-        self._escolaAluno.getEstadoEscola()
+    def setEscolaPessoa(self, escolaPessoa):
+        self._escolaPessoa = escolaPessoa
+
+    def getEscolaPessoa(self):
+        return self._escolaPessoa
+    def getEstadoEscola(self):
+        return self._escolaPessoa._estadoEscola.getNome()
+

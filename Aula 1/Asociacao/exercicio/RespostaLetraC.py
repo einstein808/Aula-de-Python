@@ -1,10 +1,12 @@
+
+
 from Professor import Professor
 from Escolaridade import Escolaridade
-from Curso import Curso
+from Escola import Escola
 
-escolaridade = Escolaridade("Pos-gradução")
-professor = Professor("maria")
-curso = Curso("computaçao")
+escolaridade = Escolaridade("doutorado")
+professor = Professor("adalberto")
+escola = Escola("machado")
 professor.setEscolaridade(escolaridade)
-curso.setCoordenador(professor)
-print(curso.getDescricaoEscolaridadeCoordenador())
+escola.setDiretor(professor)
+print(escola.getEscolaridaDiretor())

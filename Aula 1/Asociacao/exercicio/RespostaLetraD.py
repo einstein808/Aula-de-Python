@@ -1,10 +1,23 @@
-from Professor import Professor
-from Escolaridade import Escolaridade
-from Escola import Escola
 
-escolaridade = Escolaridade("doutorado")
-professor = Professor("adalberto")
-escola = Escola("machado")
-professor.setEscolaridade(escolaridade)
-escola.setDiretor(professor)
-print(escola.getEscolaridaDiretor())
+
+
+
+
+from Aluno import Aluno
+from Cidade import Cidade
+from Estado import Estado
+
+
+
+
+
+
+
+
+
+estado = Estado("calos nddobrega")
+aluno = Aluno("carlos")
+naturalidade = Cidade("carmos de minas")
+naturalidade.setEstado(estado)
+aluno.setNaturalidade(naturalidade)
+print(aluno.getEstadoNaturalidade())

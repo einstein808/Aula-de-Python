@@ -20,3 +20,6 @@ class Curso:
             return "Coordenador sem escolaridade"
         else:
             return self._coordenador.getDescricaoEscolaridade()
+
+
+
