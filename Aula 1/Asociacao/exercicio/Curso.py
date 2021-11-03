@@ -1,7 +1,9 @@
 class Curso:
-    def __init__(self,nome):
-        self._nome = nome
+    def __init__(self, nome):
+        self._nome = None
         self._coordenador = None
+        self._professor = None
+        self._nivelCurso = None
 
     def getNome(self):
             return self._nome
@@ -13,6 +15,11 @@ class Curso:
         return self._coordenador
     def setCoordenador(self, coordenador):
         self._coordenador = coordenador
+
+
+
+
+
 
 
     def getDescricaoEscolaridadeCoordenador(self):
