@@ -10,3 +10,5 @@ escola = Escola("machado")
 professor.setEscolaridade(escolaridade)
 escola.setDiretor(professor)
 print(escola.getEscolaridaDiretor())
+
+
