@@ -1,7 +1,7 @@
 p1= [1,2,3,8,9]
 p2 = [1,2,3,11,12]
 p3=[]
-p1ToP2  = p1[:]
+p1ToP2 = p1[:]
 
 p1ToP2.extend(p2)
 print(p1ToP2)
