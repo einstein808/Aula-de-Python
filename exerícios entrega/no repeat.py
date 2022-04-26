@@ -1,10 +1,20 @@
-p1= [1,2,3,8,9]
-p2 = [1,2,3,11,12]
+p1= []
+p2 = []
 p3=[]
+while True:
+    n = int(input(" digites os valores da lista 1 e 0 para sair"))
+    if n==0:
+        break
+    p1.append(n)
+while True:
+    b = int(input("digite os valorers l2 0 para sair"))
+    if b==0:
+        break
+    p2.append(b)
+
 p1ToP2 = p1[:]
 
 p1ToP2.extend(p2)
-print(p1ToP2)
 x = 0
 while x < len(p1ToP2):
     y=0
