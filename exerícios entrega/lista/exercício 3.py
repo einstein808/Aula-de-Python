@@ -1,4 +1,4 @@
-array = []2
+array = []
 while True:
     temp = int(input("digites o valores  e valor ngativo para sair"))
     if temp < 0:
