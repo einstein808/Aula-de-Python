@@ -11,11 +11,12 @@ tamanho = len(array)
 
 
 for x in range(len(array)):
-    if array[x]%2 ==0:
-        contPar+=1
+    if array[x] % 2 == 0:
+        contPar += 1
     else:
-        contN+=1
+        contN += 1
 
-porcentagem = contPar*100/tamanho
-print(f"O total de Numeros Pares é {contPar}, quantidade de impares é {contN} e a porcentagem {porcentagem}% de Numeros pares.")
-
+porcentagem = contPar * 100 / tamanho
+print(f"O total de Numeros Pares é {contPar}")
+print(f"A quantidade de impares é {contN}")
+print(f"{porcentagem}% são numeros pares.")
